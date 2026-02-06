@@ -92,7 +92,6 @@ const configOptions = [
       const event = e as IronActivateEvent
       const option = configOptions.find((option) => option.option.value === event.detail.item.value)
       if (option) {
-        // console.log("🛑 EVENT INTERCEPTED:", event.detail.item.value)
         event.stopImmediatePropagation()
         event.preventDefault()
 
@@ -127,6 +126,4 @@ const configOptions = [
       }
     } catch (err) {}
   }, 50)
-
-  console.log(timePicker.config)
 })()
